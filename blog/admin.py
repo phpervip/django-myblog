@@ -5,7 +5,7 @@ from . import models
 from blog.models import Article
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'datetime')
+    list_display = ('title', 'content', 'pub_time')
 
 admin.site.register(Article)
 

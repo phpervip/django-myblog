@@ -14,7 +14,7 @@
             <br/>
 
             <label>文章内容
-                <input name="content" value="{{ article.content | default:'' }}"/>
+                <textarea name="content" cols="50" rows="3">{{ article.content | default:'' }}</textarea>
             </label>
             <br/>
         <input type="submit" value="提交"/>

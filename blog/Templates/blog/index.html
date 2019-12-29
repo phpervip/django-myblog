@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Django 文档</title>
 </head>
 <body>
-    <h1>新文章</h1>
+    <h1>你所需要知道的关于 Django 的一切。</h1>
+    <a href="{% url 'blog:edit_page' 0%}">添加文章</a>
+     <br/>
+     <br/>
     {% for article in articles%}
-    <a href="{% url 'blog:article_page' article.id %}">{{ article.title }}</a>
-        <br>
+        {{ article.id }}.<a href="{% url 'blog:article_page' article.id %}">{{ article.title }}</a>
+        <br/>
     {% endfor %}
 </body>
 </html>
